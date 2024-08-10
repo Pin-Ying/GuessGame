@@ -40,7 +40,7 @@
 </head>
 
 <body>
-    <img src="images/guessgame.jpg" alt="">
+    <!-- <img src="images/guessgame.jpg" alt=""> -->
     <h1>猜數字挑戰賽!</h1>
     <div class="info">遊戲說明</div>
     <p>請猜1~50之間的數字，遊戲共有五次機會。</p>
@@ -51,9 +51,9 @@
     <button id="restart">重新開始</button>
     <h3 id="times">猜錯次數</h3>
     <hr>
-    <p id="records">
     <h3 class="records_title">遊戲結果紀錄</h3>
-    </p>
+    <p id="records"> </p>
+
 
 
     <script>
@@ -103,12 +103,13 @@
         }
 
         function showRecords() {
-            recordsEl.innerHTML += `
-                <hr>
-                <div>時間: ${records[-1][0]}<br>
-                    遊戲結果: ${records[-1][1]}<br>
-                    次數: ${records[-1][2]}
-                </div>`;
+            console.log(records);
+            i=0;
+            recordsEl.innerHTML = `<hr><div>時間: ${records[i][0]}<br>
+                    遊戲結果: ${records[i][1]}<br>
+                    次數: ${records[i][2]}</div>`;
+            i++;
+
             // for (let i = 0; i < records.length; i++) {
             //     recordsEl.innerHTML += `
             //     <hr>
